@@ -3,6 +3,7 @@ import socket
 import threading
 import requests
 from bs4 import BeautifulSoup
+import time
 
 # Definición del actor para el scraping
 class ScraperMercadoLibre(pykka.ThreadingActor):
@@ -20,6 +21,9 @@ class ScraperMercadoLibre(pykka.ThreadingActor):
                 result_handler.tell("URL no proporcionada")
 
     def scrapear_producto(self, url):
+        # Simula la limitación de CPU introduciendo una pausa
+        time.sleep(0.1)  # Ajusta este valor para controlar el uso de CPU
+
         try:
             respuesta = requests.get(url)
             if respuesta.status_code == 200:
@@ -84,7 +88,7 @@ class ServerActor(pykka.ThreadingActor):
 
 # Servidor TCP/IP
 def start_server():
-    host = '172.17.3.125'
+    host = '192.168.0.123'
     port = 8786
 
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
