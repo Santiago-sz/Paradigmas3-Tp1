@@ -1,7 +1,8 @@
 import socket
 
 def start_client():
-    host = '172.17.3.125'
+    #Aca ponemos el host, el cual es la ip privada de la maquina del servidor.
+    host = '192.168.0.123'
     port = 8786
 
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
