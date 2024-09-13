@@ -8,7 +8,7 @@ def start_client():
     client_socket.connect((host, port))
 
     # Enviar comando para realizar scraping
-    queries = "preservativos, celulares"  # Consulta para buscar diferentes productos
+    queries = "enova n50, radio auto"  # Consulta para buscar diferentes productos
     print(f"Enviando consulta al servidor: scrape {queries}")  # Mensaje de depuración
     client_socket.sendall(f"scrape {queries}".encode())
 
