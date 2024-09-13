@@ -32,9 +32,8 @@ if __name__== '__main__':  # Corregido el nombre del módulo principal
 
     # Ejemplo de solicitudes de scraping
     requests = [
-        {'page': 'ml', 'query': 'laptop'},
-        {'page': 'fv', 'query': 'smartphone'},
-        {'page': 'mm', 'query': 'televisor'}
+        {'page': 'ml', 'query': 'playstation'},
+
     ]
 
     send_scrape_request(host, port, requests);
