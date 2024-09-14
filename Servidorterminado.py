@@ -22,7 +22,7 @@ class ScraperMercadoLibre(pykka.ThreadingActor):
 
     def scrapear_producto(self, url):
         # Simula la limitación de CPU introduciendo una pausa
-        time.sleep(0.1)  # Ajusta este valor para controlar el uso de CPU
+        time.sleep(0.01)  # Ajusta este valor para controlar el uso de CPU
 
         try:
             respuesta = requests.get(url)
