@@ -1,7 +1,7 @@
 import socket
 
 def start_client():
-    host = '192.168.0.123'
+    host = '192.168.0.76'
     port = 8786
 
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
