@@ -26,7 +26,7 @@ def send_scrape_request(host, port, requests):
     finally:
         client_socket.close()
 
-if _name_ == '_main_':  # Corregido el nombre del módulo principal
+if __name__== '__main__':  # Corregido el nombre del módulo principal
     host = '192.168.0.123'  # Dirección IP del servidor
     port = 8786  # Puerto del servidor
 
